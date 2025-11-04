@@ -11,49 +11,38 @@
     <link rel="stylesheet" href="CSS/Filters.css">
     <link rel="stylesheet" href="CSS/catalog.css">
     <link rel="stylesheet" href="CSS/Outlet.css">
-<link rel="stylesheet" href="CSS/Styles.css">
 </head>
 
 <body>
 
-    <nav class="navbar navbar-expand-lg navbar-light sticky-top">
-    <div class="container">
-      <a class="navbar-brand" href="index.html">Gyver Home</a>
-      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
-        aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
-        <span class="navbar-toggler-icon"></span>
-      </button>
+    <header class="ca">
+        <div class="wrap header-in">
+            <a href="index.html" class="logo">S GYVER</a>
 
-      <div class="collapse navbar-collapse" id="navbarNav">
+            <!-- เมธอด: ฟอร์มค้นหา — onsubmit กันรีเฟรชหน้า (เดโม) ให้ JS ไปจัดการแทน -->
+            <form class="search" onsubmit="event.preventDefault();">
+                <input id="q" type="search" placeholder="เช่น หิ้งพระ" aria-label="ค้นหาสินค้า">
+                <button type="submit" aria-label="ปุ่มค้นหา">ค้นหา</button>
+            </form>
 
-        <form class="search w-50" action="Catalog.html" method="GET">
-        <input type="search" placeholder="เช่น หิ้งพระ" aria-label="ค้นหาสินค้า" name="q">
-        <button type="submit" aria-label="ปุ่มค้นหา">ค้นหา</button>
-      </form>
+            <!-- เมธอด: ลิงก์ลัดมุมขวา (บัญชี, รายการโปรด, ตะกร้า) -->
+            <nav class="quick" aria-label="เมนูลัด">
+                <a href="Log-in.html">เข้าสู่ระบบ</a>
+                <a href="Favorites.html">รายการโปรด</a>
+                <a href="Cart.html" class="cart" aria-live="polite">ตะกร้า (0)</a>
+            </nav>
+        </div>
 
-        <ul class="navbar-nav ms-auto">
-          <li class="nav-item">
-            <a class="nav-link" href="index.html">Home</a>
-          </li>
-          <li class="nav-item">
-            <a class="nav-link" href="catalog.html">สินค้า</a>
-          </li>
-          <li class="nav-item">
-            <a class="nav-link" href="catalog-3d.html">3D</a>
-          </li>
-          <li class="nav-item">
-            <a class="nav-link" href="outlet.html">สินค้า Outlet</a>
-          </li>
-          <li class="nav-item">
-            <a class="nav-link " href="about.html">About Us</a>
-          </li>
-          <li class="nav-item">
-            <a class="nav-link " href="contact.html">Contact</a>
-          </li>
-        </ul>
-      </div>
-    </div>
-  </nav>
+        <!-- เมธอด: เมนูหลักแบบชิป (จัดหมวดหมู่) -->
+        <div class="menu wrap" role="navigation" aria-label="เมนูหลัก">
+      <a href="index.html">ของแต่งบ้าน</a>
+      <a href="catalog.html">สินค้า</a>
+      <a href="catalog-3d.html">3D</a>
+      <a href="outlet.html">สินค้า Outlet</a>
+      <a href="gallery.html">แกลลอรี่</a>
+      <a href="contact.html">ติดต่อ</a>
+        </div>
+    </header>
 
     <!-- แถบตัวกรอง -->
     <div class="wrapFilters toolbar">
@@ -118,7 +107,6 @@
         <div class="footer">© 2025 Gyver Home · งานออกแบบทำมือ / รับสั่งทำ · ติดต่อ: Sgyver36@gmail.com</div>
     </footer>
 
-     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
     <script src="JS/Filters.js"></script>
     <script src="JS/outlet-products.js"></script>
 
