@@ -1,0 +1,190 @@
+.search01 {
+    padding: 0px 0px 0px 50px;
+}
+
+/* ตั้งค่าความสูงขั้นต่ำสำหรับสไลด์ เพื่อให้ดูดีบนจอใหญ่ */
+.carousel-item {
+    min-height: 450px;
+    /* คุณสามารถปรับความสูงนี้ได้ตามต้องการ */
+    background-color: #f8f9fa;
+    /* สีพื้นหลังเผื่อรูปโหลดไม่ขึ้น */
+}
+
+.carousel-item img {
+    object-fit: cover;
+    /* ทำให้รูปภาพเต็มพื้นที่สไลด์โดยไม่เสียสัดส่วน */
+    height: 450px;
+    /* ต้องเท่ากับ min-height ด้านบน */
+    width: 100%;
+}
+
+/* ปรับปรุงการมองเห็นข้อความบน Carousel */
+.carousel-caption {
+    background-color: rgba(0, 0, 0, 0.5);
+    /* พื้นหลังสีดำโปร่งแสง 50% */
+    padding: 1.5rem;
+    border-radius: .5rem;
+}
+.navbar.navbar-light {
+  /* 1. สีพื้นหลังขาวโปร่งแสง (ปรับ 0.7 ตามชอบ) */
+  background-color: rgba(255, 255, 255, 0.7);
+
+  /* 2. เอฟเฟกต์เบลอพื้นหลัง (Frosted Glass) */
+  -webkit-backdrop-filter: blur(10px); /* สำหรับ Safari */
+  backdrop-filter: blur(10px);
+}
+
+/* * 3. บังคับตัวอักษรให้เป็น 'สีดำ'
+ * (เพราะ .navbar-light ของ Bootstrap ให้สีเทาจางๆ) 
+ */
+
+/* "ชื่อแอป/บริษัท" (Brand) */
+.navbar-light .navbar-brand {
+    padding: 0px 70px 0px 0px;
+  color: #ff6f59;
+}
+
+/* ลิงก์เมนู (Nav Links) ทั้งหมด */
+.navbar-light .navbar-nav .nav-link {
+  color: #000;
+}
+
+/* ลิงก์ที่ถูกเลือกอยู่ (Active) */
+.navbar-light .navbar-nav .nav-link.active {
+  color: #000;
+  font-weight: bold; /* ทำให้หนาขึ้นเล็กน้อย */
+}
+
+/* ลิงก์เมื่อเอาเมาส์ชี้ (Hover) */
+.navbar-light .navbar-nav .nav-link:hover {
+  color: #333; /* สีเทาเข้ม */
+}
+/* ------------------------------------ */
+/* สไตล์การ์ดสมาชิกทีม (Team Card Style) */
+/* ------------------------------------ */
+
+/* สีหลักของธีม (สีชมพูเข้ม/ม่วงแดง) */
+:root {
+  /* คุณสามารถเปลี่ยนรหัสสีนี้ได้ตามชอบ เช่น #D90429 หรือ #C2185B */
+  --team-primary-color: #ff0000; 
+}
+
+/* พื้นหลังของ Section (สีเทาอ่อนๆ เหมือนในตัวอย่าง) */
+.team-section {
+  background-color: #f8f9fa;
+}
+
+/* 1. สไตล์การ์ดหลัก (สี่เหลี่ยมโค้งมน, มีเงา) */
+.team-card {
+  background-color: #ffffff;
+  border-radius: 16px; /* ความโค้งของขอบการ์ด */
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.07); /* เงาจางๆ */
+  padding: 2.5rem 2rem; /* เว้นวรรคภายใน (บน-ล่าง, ซ้าย-ขวา) */
+  text-align: center;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  height: 100%; /* ทำให้การ์ดสูงเท่ากัน */
+}
+
+/* เพิ่มเอฟเฟกต์ตอนเอาเมาส์ชี้ (Hover) */
+.team-card:hover {
+  transform: translateY(-8px); /* ทำให้การ์ดยกลอยขึ้น */
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.12);
+}
+
+/* 2. สไตล์รูปภาพ (วงกลม, มีขอบ) */
+.team-card .team-img {
+  width: 130px;
+  height: 130px;
+  border-radius: 50%; /* ทำให้เป็นวงกลม */
+  border: 5px solid var(--team-primary-color); /* ขอบสีตามธีม */
+  object-fit: cover; /* ป้องกันไม่ให้รูปบิดเบี้ยว */
+  margin-bottom: 1.5rem;
+}
+
+/* 3. สไตล์ตัวอักษร */
+.team-card .team-name {
+  font-size: 1.25rem; /* ขนาดชื่อ */
+  font-weight: 600; /* ความหนา */
+  color: #333;
+  margin-bottom: 0.25rem;
+}
+
+.team-card .team-id {
+  font-size: 0.9rem; /* ขนาด ID */
+  color: #888;
+  margin-bottom: 1.25rem;
+}
+
+/* 4. สไตล์ปุ่ม GitHub (ปุ่มแบบ Pill) */
+.team-card .btn-github {
+  background-color: var(--team-primary-color);
+  color: #ffffff;
+  font-size: 0.9rem;
+  font-weight: 500;
+  padding: 0.5rem 1.5rem;
+  border: none;
+  transition: background-color 0.2s ease;
+}
+
+/* สีปุ่ม GitHub ตอนเอาเมาส์ชี้ */
+.team-card .btn-github:hover {
+  background-color: #ff6f59; /* สีที่เข้มขึ้น */
+  color: #ffffff;
+}
+
+/* ------------------------------------ */
+/* สไตล์หน้าติดต่อ (Contact Section)     */
+/* ------------------------------------ */
+
+/* (ถ้ายังไม่มี) สีหลักจากหน้า Team */
+:root {
+  --team-primary-color: #AD1457; 
+}
+
+/* 1. พื้นหลังของ Section (สีเทาอ่อนๆ เหมือนหน้า Team) */
+.contact-section {
+  background-color: #f8f9fa;
+}
+
+/* 2. สไตล์ส่วนข้อมูลติดต่อ (ฝั่งซ้าย) */
+.contact-icon {
+  font-size: 1.5rem; /* ขนาดไอคอน (bi-...) */
+  color: var(--team-primary-color);
+  width: 40px; /* จัดพื้นที่ให้ไอคอน */
+}
+
+.contact-info-item strong {
+  color: #333;
+}
+
+.contact-info-item a {
+  color: #555;
+  transition: color 0.2s ease;
+}
+.contact-info-item a:hover {
+  color: var(--team-primary-color);
+}
+
+/* 3. สไตล์ฟอร์ม (ฝั่งขวา) */
+.contact-section .form-control {
+  border-radius: 0.5rem; /* ทำให้ขอบมนเล็กน้อย */
+  border: 1px solid #ddd;
+}
+.contact-section .form-control:focus {
+  border-color: var(--team-primary-color);
+  box-shadow: 0 0 0 0.25rem rgba(173, 20, 87, 0.25);
+}
+
+/* 4. สไตล์ปุ่มส่งข้อความ (ให้เหมือนปุ่ม GitHub) */
+.btn-contact-submit {
+  background-color: var(--team-primary-color);
+  color: #ffffff;
+  font-weight: 500;
+  border: none;
+  transition: background-color 0.2s ease;
+}
+
+.btn-contact-submit:hover {
+  background-color: #ff6f59; /* สีเข้มขึ้น */
+  color: #ffffff;
+}
