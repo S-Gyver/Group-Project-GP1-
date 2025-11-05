@@ -3,35 +3,39 @@
 
 <head>
   <meta charset="utf-8">
-  <meta name="viewport" content="width=device-width,initial-scale=1">
-  <title>Gyver Home — Pinkoi-style</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="icon" href="image/title.ico" type="image/png">
+  <title>Gyver Home</title>
+
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
   <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" />
-  <link rel="stylesheet" href="CSS/Head.css">
-  <link rel="stylesheet" href="CSS/Swiper.css">
-  <link rel="stylesheet" href="CSS/index.css">
-  <link rel="stylesheet" href="CSS/Styles.css">
-</head>
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
+  
+  <link rel="stylesheet" href="CSS/Styles.css"> 
+  </head>
 
 <body>
+
   <nav class="navbar navbar-expand-lg navbar-light sticky-top">
     <div class="container">
-      <a class="navbar-brand" href="index.html">Gyver Home</a>
-      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
-        aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+      <a class="navbar-brand d-inline-flex align-items-center" href="index.html">
+  <img src="image/logo.png" alt="Gyver Home Logo" height="30" class="me-2">
+  Gyver Home
+</a>
+
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
         <span class="navbar-toggler-icon"></span>
       </button>
 
       <div class="collapse navbar-collapse" id="navbarNav">
-
-        <form class="search w-50" action="Catalog.html" method="GET">
-        <input type="search" placeholder="เช่น หิ้งพระ" aria-label="ค้นหาสินค้า" name="q">
-        <button type="submit" aria-label="ปุ่มค้นหา">ค้นหา</button>
-      </form>
+        <form class="search-form d-flex w-50 mx-auto" action="Catalog.html" method="GET">
+          <input class="form-control me-2" type="search" placeholder="เช่น หิ้งพระ" aria-label="ค้นหาสินค้า" name="q">
+          <button class="btn btn-outline-primary" type="submit">ค้นหา</button>
+        </form>
 
         <ul class="navbar-nav ms-auto">
           <li class="nav-item">
-            <a class="nav-link" href="index.html">Home</a>
+            <a class="nav-link active" href="index.html">Home</a>
           </li>
           <li class="nav-item">
             <a class="nav-link" href="catalog.html">สินค้า</a>
@@ -50,72 +54,119 @@
     </div>
   </nav>
 
-  <main class="wrap ww">
-    <!-- เมธอด: สไลด์ฮีโร่ ใช้โครงสร้าง .swiper > .swiper-wrapper > .swiper-slide -->
-    <section class="hero-slider" aria-label="โปรโมชั่นและแบนเนอร์">
-      <div class="swiper">
+  <main>
+
+    <section class="hero-slider-section" id="header">
+      <div class="swiper hero-swiper">
         <div class="swiper-wrapper">
-          <!-- เมธอด: สไลด์แต่ละใบควรใส่ alt อธิบายภาพสั้นๆ -->
-          <div class="swiper-slide slide-bg">
+          <div class="swiper-slide">
             <img class="slide-img" src="image/banner/banner1.png" alt="แบนเนอร์ 1">
           </div>
-          <div class="swiper-slide slide-bg">
+          <div class="swiper-slide">
             <img class="slide-img" src="image/banner/banner2.png" alt="แบนเนอร์ 2">
           </div>
-          <div class="swiper-slide slide-bg">
+          <div class="swiper-slide">
             <img class="slide-img" src="image/banner/banner3.png" alt="แบนเนอร์ 3">
           </div>
         </div>
-        <!-- เมธอด: จุดบอกหน้าและปุ่มนำทางของ Swiper -->
-        <div class="swiper-pagination" aria-label="ตำแหน่งสไลด์"></div>
-        <div class="swiper-button-prev" aria-label="สไลด์ก่อนหน้า"></div>
-        <div class="swiper-button-next" aria-label="สไลด์ถัดไป"></div>
+        <div class="swiper-pagination"></div>
+        <div class="swiper-button-prev"></div>
+        <div class="swiper-button-next"></div>
       </div>
     </section>
 
-    <div class="section">
-      <h2>ของแต่งบ้าน</h2><a href="catalog.html">ดูทั้งหมด</a>
+    <section class="features-section py-5" id="features">
+      <div class="container">
+        <div class="text-center mb-5">
+          <h2 class="fw-bold">ทำไมต้องเลือก Gyver Home</h2>
+          <p class="text-muted">คุณภาพ ดีไซน์ และบริการ ที่คุณวางใจได้</p>
+        </div>
+
+        <div class="row g-4">
+          <div class="col-12 col-lg-4">
+            <div class="feature-card">
+              <i class="bi bi-palette feature-icon"></i> <h5 class="fw-bold">ดีไซน์ที่โดดเด่น</h5>
+              <p>คัดสรรโดยดีไซเนอร์ เพื่อให้เข้ากับทุกไลฟ์สไตล์ ไม่ซ้ำใคร</p>
+            </div>
+          </div>
+          <div class="col-12 col-lg-4">
+            <div class="feature-card">
+              <i class="bi bi-shield-check feature-icon"></i> <h5 class="fw-bold">วัสดุคุณภาพสูง</h5>
+              <p>เราเลือกใช้วัสดุเกรดพรีเมียม แข็งแรง ทนทาน เพื่ออายุการใช้งานที่ยาวนาน</p>
+            </div>
+          </div>
+          <div class="col-12 col-lg-4">
+            <div class="feature-card">
+              <i class="bi bi-truck feature-icon"></i> <h5 class="fw-bold">บริการจัดส่งและประกอบ</h5>
+              <p>จัดส่งรวดเร็วทั่วไทย พร้อมบริการประกอบและติดตั้งโดยทีมงานมืออาชีพ</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="testimonial-section py-5" id="testimonials">
+      <div class="container">
+        <div class="text-center mb-5">
+          <h2 class="fw-bold">ความประทับใจ</h2>
+          <p class="text-muted">เสียงตอบรับจากลูกค้าที่น่ารักของเรา</p>
+        </div>
+        <div class="row g-4">
+          <div class="col-12 col-md-6 col-lg-4">
+            <div class="testimonial-card">
+              <p class="testimonial-text">"โซฟาตัวนี้สวยมากครับ เข้ากับบ้านสไตล์มินิมอลของเราพอดีเลย คุณภาพวัสดุก็ดีเกินราคา นั่งสบายมากครับ"</p>
+              <div class="testimonial-author">
+                <img src="image/a1.jpg" alt="คุณพาทิศ">
+                <div>
+                  <h6 class="mb-0">พาทิศ ลดาพงษ์พัฒนา</h6>
+                  <small class="text-muted">เจ้าของบ้าน, กรุงเทพ</small>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="col-12 col-md-6 col-lg-4">
+            <div class="testimonial-card">
+              <p class="testimonial-text">"ประทับใจบริการจัดส่งและประกอบมาก ทีมงานสุภาพและทำงานเรียบร้อย โต๊ะทานข้าวแข็งแรง สวยงาม ถูกใจทั้งครอบครัวครับ"</p>
+              <div class="testimonial-author">
+                <img src="image/a2.jpg" alt="คุณชินวัตร">
+                <div>
+                  <h6 class="mb-0">ชินวัตร ภู่เปี่ยม</h6>
+                  <small class="text-muted">ครอบครัวภู่เปี่ยม</small>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="col-12 col-md-6 col-lg-4">
+            <div class="testimonial-card">
+              <p class="testimonial-text">"หาของแต่งบ้านที่นี่สนุกมาก มีของให้เลือกเยอะ ดีไซน์ไม่ซ้ำใคร ได้โคมไฟสวยๆ ไปแต่งห้องนอน ถูกใจมากครับ"</p>
+              <div class="testimonial-author">
+                <img src="image/a3.jpg" alt="คุณปฏิพล">
+                <div>
+                  <h6 class="mb-0">ปฏิพล สี่หิรัญวงศ์</h6>
+                  <small class="text-muted">ดีไซเนอร์อิสระ</small>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+  </main>
+  <footer class="gradient-footer py-4" id="social">
+    <div class="container text-center text-dark">
+      <p class="mb-0">
+        © 2025 Gyver Home Project. All Rights Reserved. | Follow us on
+        <a href="https://www.facebook.com/PIMFanpage" target="_blank" class="social-icon-sm" aria-label="Facebook"><i class="bi bi-facebook"></i></a>
+        <a href="https://www.instagram.com/pim_smart/" target="_blank" class="social-icon-sm" aria-label="Instagram"><i class="bi bi-instagram"></i></a>
+      </p>
     </div>
+  </footer>
 
-    <!-- การ์ด 5 อัน -->
-    <div id="product-grid-container" class="product-grid-container">
-    </div>
-
-
-    <hr>
-
-    <div class="section">
-      <h2>สินค้าแนะนำ</h2><a href="catalog.html">ดูทั้งหมด</a>
-    </div>
-
-    <div id="recommended-grid-container" class="product-grid-container">
-    </div>
-
-    <hr>
-
-    <div class="mto">
-      <p><strong>สั่งทำ (Made-to-Order)</strong> — เลือกวัสดุ/ขนาด/สี ให้เข้าบ้านคุณได้เลย ส่งร่างแบบก่อนผลิต</p>
-      <button class="btn">เริ่มสั่งทำ</button>
-    </div>
-
-    <hr>
-
-    <div class="mto">
-      <div><strong>รับคูปอง 100.-</strong> เมื่อสมัครรับข่าวสารสไตล์ & โปรใหม่</div>
-      <button class="btn primary">สมัคร</button>
-      </form>
-    </div>
-
-    <hr>
-
-    <footer>
-      <div class="footer">© 2025 Gyver Home · งานออกแบบทำมือ / รับสั่งทำ · ติดต่อ: Sgyver36@gmail.com</div>
-    </footer>
-
-    <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
-    <script src="JS/index.js"></script>
-    <script src="JS/Swiper.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+  
+  <script src="JS/Swiper.js"></script>
 </body>
 
 </html>
